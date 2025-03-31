@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+          content="A digital library where you can bookmark your favorite book to read and get hundreds of amazing books as a suggestions to read." />
+
+    <title>Library app</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet" />
+
+    <!-- Our CSS and JS files -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+<!-- ****************** Header  ***************** -->
+<header>
+    <div class="logo-ctn">
+        <span class="logo">Reader.</span>
+    </div>
+    <div class="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul class="nav-links-ctn" role="list">
+            <li class="nav-link-ctn">
+                <a href="#reading-list" class="nav-link">Reading List</a>
+            </li>
+            <li class="nav-link-ctn">
+                <a href="#suggestion" class="nav-link">Suggesions</a>
+            </li>
+            <li class="nav-link-ctn">
+                <a href="#why-books" class="nav-link active">Why Books?</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ****************** Main section ******************** -->
+<main>
+    <section class="main-section">
+        <!-- Also try to add the Book Images, Will use API to get more info on books -->
+        <!-- When the form is submitted and the book is added to the list show some notification so that user know if the book is added in reading list. -->
+
+        <!-- ********** Hero Section ************ -->
+        <section class="hero-section">
+            <div class="title-ctn">
+                <h1 class="title">
+                    Create your own
+                    <span class="title-span">Digital library</span>
+                </h1>
+                <p>
+                    A Digital Library app where you can get thousands of amazing books available in diffrent categories and
+                    bookmark your favorite books and make your own amazing digital library.
+                </p>
+                <a href="#suggestion"><button class="primary-btn">Discover a new Book</button></a>
+            </div>
+            <section class="form-section">
+                <h2 class="section-heading">Add book to your Reading List</h2>
+                <form action="#" id="form">
+                    <div class="form-container">
+                        <div class="input-ctn">
+                            <label for="book-name-input">Name of the book</label>
+                            <input type="text" name="Book name" id="book-name-input" />
+                        </div>
+
+                        <div class="input-ctn">
+                            <label for="book-author-input">Author of the book</label>
+                            <input type="text" name="Book Author" id="book-author-input" />
+                        </div>
+
+                        <div class="input-ctn">
+                            <label for="book-pages-input">Number of pages</label>
+                            <input type="number" name="Book pages" id="book-pages-input" />
+                        </div>
+
+                        <div class="input-ctn">
+                            <span>Have you read this book?</span>
+                            <label class="switch">
+                                <input type="checkbox" name="Read status" class="toggle-btn" checked="checked"
+                                       id="read-status-input" />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="add-btn-ctn">
+                            <button type="submit" class="primary-btn submit-btn">
+                                Add to Reading List
+                                <!-- Add a arrow icon here -->
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <!-- ********** Reading list Section ************ -->
+        <section class="reading-list-section" id="reading-list">
+            <h2 class="section-heading">Your Reading List</h2>
+            <div class="image-ctn">
+                <img src="#" alt="" />
+                <p></p>
+            </div>
+            <div class="demo-book">
+                <h3 class="book-title">The psychology of Money</h3>
+                <div class="author_and_page-ctn">
+                    <p class="author-name">Morgan Housel</p>
+                    <p class="pages-number">242 pages</p>
+                </div>
+                <div class="read-status-ctn">
+                    <span>Read</span>
+                    <label class="switch">
+                        <input type="checkbox" name="read status" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <button class="primary-btn remove-btn">Remove from list</button>
+            </div>
+        </section>
+
+        <!-- ********** Suggestion list Section ************ -->
+        <section class="suggestion-list-section" id="suggestion">
+            <h2 class="section-heading">Suggested Books to Read</h2>
+            <div class="suggestion-books-ctn">
+                <article class="suggestion-book-ctn">
+                    <div class="img-ctn">
+                        <img src="./images/atomic habits.jpg" alt="atomic habits book" />
+                    </div>
+                    <div class="book-content">
+                        <h3 class="suggestion-book book-title">Atomic Habits</h3>
+                        <div class="author_and_page-ctn">
+                            <p class="author-name">By James Clear</p>
+                            <p class="pages-number">306 pages</p>
+                        </div>
+                        <p class="book-description">
+                            Tiny changes, Remarkable Results. A supremely practical and
+                            useful book that will change how you approach your day and
+                            live your life and an effective guide you need to break bad
+                            routines and make good ones.
+                        </p>
+                        <button class="primary-btn add-btn">Add to your list</button>
+                    </div>
+                </article>
+
+                <article class="suggestion-book-ctn">
+                    <div class="img-ctn">
+                        <img src="./images/4-hour work week.jpg" alt="4-hour work week book" />
+                    </div>
+                    <div class="book-content">
+                        <h3 class="suggestion-book book-title">Thr 4-hour work week</h3>
+                        <div class="author_and_page-ctn">
+                            <p class="author-name">By Timothy Ferriss</p>
+                            <p class="pages-number">396 pages</p>
+                        </div>
+                        <p class="book-description">
+                            Stunnig and Amazing! This book is a new way of solving a very
+                            old problem: just how can we work to live and prevent our
+                            lives from being all about work. A world of infinite options
+                            await those who would read this book and be inspired by it.
+                        </p>
+                        <button class="primary-btn add-btn">Add to your list</button>
+                    </div>
+                </article>
+
+                <article class="suggestion-book-ctn">
+                    <div class="img-ctn">
+                        <img src="./images/dale carnegie.jpg" alt="How to win friends and influence people book" />
+                    </div>
+                    <div class="book-content">
+                        <h3 class="suggestion-book book-title">
+                            How to win friends and influence people
+                        </h3>
+                        <div class="author_and_page-ctn">
+                            <p class="author-name">By Dale Carnegie</p>
+                            <p class="pages-number">228 pages</p>
+                        </div>
+                        <p class="book-description">
+                            This book by Dale Carnegie will be amazing for you if you
+                            wanted to build the good communication skills. The methods and
+                            examples in the book are well illustrated to apply in real
+                            life.
+                        </p>
+                        <button class="primary-btn add-btn">Add to your list</button>
+                    </div>
+                </article>
+
+                <article class="suggestion-book-ctn">
+                    <div class="img-ctn">
+                        <img src="./images/attitude is everything.jpg" alt="Attitude is everything book image" />
+                    </div>
+                    <div class="book-content">
+                        <h3 class="suggestion-book book-title">
+                            Attitude is everything
+                        </h3>
+                        <div class="author_and_page-ctn">
+                            <p class="author-name">By Jeff keller</p>
+                            <p class="pages-number">144 pages</p>
+                        </div>
+                        <p class="book-description">
+                            IF YOU CAN DREAM IT, YOU CAN DO IT! Whether your outlook is
+                            negative, positive or somewhere in between, Jeff Keller,
+                            motivational speaker and coach, will show you how to take
+                            control and unleash your hidden potential
+                        </p>
+                        <button class="primary-btn add-btn">Add to your list</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ********** Why Reading book Section ************ -->
+        <section class="why-books" id="why-books">
+            <h2 class="section-heading">Why Read Books?</h2>
+            <div class="author-reviews-ctn">
+                <div class="author-reviews">
+                    <div class="author-info-ctn">
+                        <div class="authors-img-ctn">
+                            <img src="./images/walt-disney.jpg" alt="Walt disney image" />
+                        </div>
+                        <div class="author-name-ctn">
+                            <h4 class="author-name">Walt Disney</h4>
+                            <p class="author-work">American entrepreneur</p>
+                        </div>
+                    </div>
+                    <div class="author-quote-ctn">
+                        <blockquote class="author-quote">
+                            “There is more treasure in books than in all the pirate's loot
+                            on Treasure Island.”
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="author-reviews">
+                    <div class="author-info-ctn">
+                        <div class="authors-img-ctn">
+                            <img src="./images/George_R._R._Martin.jpg" alt="George R. R. Martin image" />
+                        </div>
+                        <div class="author-name-ctn">
+                            <h4 class="author-name">George R.R. Martin</h4>
+                            <p class="author-work">American novelist</p>
+                        </div>
+                    </div>
+
+                    <div class="author-quote-ctn">
+                        <blockquote class="author-quote">
+                            “A reader lives a thousand lives before he dies, said Jojen.
+                            The man who never reads lives only one.”
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="author-reviews">
+                    <div class="author-info-ctn">
+                        <div class="authors-img-ctn">
+                            <img src="./images/Dr. suess.jpg" alt="Dr. suess image" />
+                        </div>
+                        <div class="author-name-ctn">
+                            <h4 class="author-name">Dr. Seuss</h4>
+                            <p class="author-work">American author</p>
+                        </div>
+                    </div>
+                    <div class="author-quote-ctn">
+                        <blockquote class="author-quote">
+                            “The more that you read, the more things you will know. The
+                            more that you learn, the more places you’ll go.”
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<!-- *************** Footer *************** -->
+<footer>
+    <div class="footer-ctn">
+        <div class="logo-ctn">
+            <span class="logo">Reader.</span>
+        </div>
+        <div class="credit">
+            <p class="credit-text">Made with Love</p>
+            <p class="credit-text">@dineshsuthar123</p>
+        </div>
+        <ul class="social-links-ctn" role="list">
+            <li class="social-link-ctn">
+                <a href="https://twitter.com/Dinesh12839101" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-link-ctn">
+                <a href="https://github.com/dineshsuthar123" class="social-link">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+            <li class="social-link-ctn">
+                <a href="https://www.instagram.com/dinesh_suthar_77/" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
